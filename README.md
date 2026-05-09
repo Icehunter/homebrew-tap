@@ -6,7 +6,19 @@ Homebrew formulae for [conduit](https://github.com/Icehunter/conduit) and other 
 
 ```bash
 brew tap icehunter/tap
-brew install conduit
+brew install icehunter/tap/conduit
+```
+
+Or as a one-liner:
+
+```bash
+brew install icehunter/tap/conduit
+```
+
+To upgrade:
+
+```bash
+brew upgrade icehunter/tap/conduit
 ```
 
 ## Updating
