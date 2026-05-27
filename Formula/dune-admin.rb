@@ -5,36 +5,39 @@
 class DuneAdmin < Formula
   desc "Local-first, provider-aware terminal agent (Claude Code wire-compatible)."
   homepage "https://github.com/Icehunter/dune-admin"
-  version "0.11.1"
+  version "0.12.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/Icehunter/dune-admin/releases/download/v0.11.1/dune-admin_darwin_all.tar.gz"
-    sha256 "b29548b8cfb48cc41997cb51866268d53fc482dcb06fd1ed18856f756111d3e3"
+    url "https://github.com/Icehunter/dune-admin/releases/download/v0.12.0/dune-admin_darwin_all.tar.gz"
+    sha256 "1d78aaeac62521dab0ab0c9f9c7fb75193f619d708362e7f5f69d28c9ae72928"
 
     define_method(:install) do
       bin.install "dune-admin"
       pkgshare.install "item-data.json"
+      pkgshare.install "quality-data.json"
       pkgshare.install "tags-data.json"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Icehunter/dune-admin/releases/download/v0.11.1/dune-admin_linux_amd64.tar.gz"
-      sha256 "3580dfc48e37a1c029028a03e0befa70aca77e429836543837c9c6711fc50790"
+      url "https://github.com/Icehunter/dune-admin/releases/download/v0.12.0/dune-admin_linux_amd64.tar.gz"
+      sha256 "cd63f77c5ac221e066fb4876a964f6cf36e092f5ab45c82b129b577a2c0a9760"
       define_method(:install) do
         bin.install "dune-admin"
         pkgshare.install "item-data.json"
+        pkgshare.install "quality-data.json"
         pkgshare.install "tags-data.json"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Icehunter/dune-admin/releases/download/v0.11.1/dune-admin_linux_arm64.tar.gz"
-      sha256 "3e11708435a70c1a648a7c264284dada0caca008726615e72fefa21401dc9b49"
+      url "https://github.com/Icehunter/dune-admin/releases/download/v0.12.0/dune-admin_linux_arm64.tar.gz"
+      sha256 "3c4ca7d6afa6ad7595645c8e496439697a47152f70b1cfe6b27b742439d3378b"
       define_method(:install) do
         bin.install "dune-admin"
         pkgshare.install "item-data.json"
+        pkgshare.install "quality-data.json"
         pkgshare.install "tags-data.json"
       end
     end
