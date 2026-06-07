@@ -5,40 +5,52 @@
 class DuneAdmin < Formula
   desc "Local-first, provider-aware terminal agent (Claude Code wire-compatible)."
   homepage "https://github.com/Icehunter/dune-admin"
-  version "0.27.3"
+  version "0.28.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/Icehunter/dune-admin/releases/download/v0.27.3/dune-admin_darwin_all.tar.gz"
-    sha256 "1c7648c4bb6b4d6c65a49274778abeb80fa4d688ab76113aed99af6ae53c83f5"
+    url "https://github.com/Icehunter/dune-admin/releases/download/v0.28.0/dune-admin_darwin_all.tar.gz"
+    sha256 "9d0fae71e5e5fd3abd111206f1712a044d0dc3bbaafc68414e141ebf351bcbe0"
 
     define_method(:install) do
       bin.install "dune-admin"
       pkgshare.install "item-data.json"
       pkgshare.install "quality-data.json"
       pkgshare.install "tags-data.json"
+      pkgshare.install "gameplayTags.json"
+      pkgshare.install "skillModules.json"
+      pkgshare.install "vehicles.json"
+      pkgshare.install "cheatScripts.json"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Icehunter/dune-admin/releases/download/v0.27.3/dune-admin_linux_amd64.tar.gz"
-      sha256 "7c26bae0939547161104bd290ffb07417aacae8a6c66b4bbeab8fee64b388964"
+      url "https://github.com/Icehunter/dune-admin/releases/download/v0.28.0/dune-admin_linux_amd64.tar.gz"
+      sha256 "8c76a8807ba69fdf56df378353207afa8f5405078a68d522e0a41dd2a4aaf395"
       define_method(:install) do
         bin.install "dune-admin"
         pkgshare.install "item-data.json"
         pkgshare.install "quality-data.json"
         pkgshare.install "tags-data.json"
+        pkgshare.install "gameplayTags.json"
+        pkgshare.install "skillModules.json"
+        pkgshare.install "vehicles.json"
+        pkgshare.install "cheatScripts.json"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Icehunter/dune-admin/releases/download/v0.27.3/dune-admin_linux_arm64.tar.gz"
-      sha256 "93c08d685cd1fcd896983d93521aaa79c3f4af93368d50aba3ac901088db9851"
+      url "https://github.com/Icehunter/dune-admin/releases/download/v0.28.0/dune-admin_linux_arm64.tar.gz"
+      sha256 "eb840562c6b3e7abb168071facd49d46ac546f619fedd187ac44d2280a2b75df"
       define_method(:install) do
         bin.install "dune-admin"
         pkgshare.install "item-data.json"
         pkgshare.install "quality-data.json"
         pkgshare.install "tags-data.json"
+        pkgshare.install "gameplayTags.json"
+        pkgshare.install "skillModules.json"
+        pkgshare.install "vehicles.json"
+        pkgshare.install "cheatScripts.json"
       end
     end
   end
