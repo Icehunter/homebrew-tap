@@ -5,12 +5,12 @@
 class Conduit < Formula
   desc "Local-first, provider-aware terminal agent (Claude Code wire-compatible)."
   homepage "https://github.com/Icehunter/conduit"
-  version "1.21.2"
+  version "1.22.0"
   license "MIT OR Apache-2.0"
 
   on_macos do
-    url "https://github.com/Icehunter/conduit/releases/download/v1.21.2/conduit_darwin_all.tar.gz"
-    sha256 "d619011a3aacae27e0071f50938ffcd46cd2f586a1bbea8e369a44dc2b1962a4"
+    url "https://github.com/Icehunter/conduit/releases/download/v1.22.0/conduit_darwin_all.tar.gz"
+    sha256 "3cf3afe5c0f0e763af07cbfb9050cb27482123ed89abaad23cd702276372669a"
 
     define_method(:install) do
       bin.install "conduit"
@@ -19,15 +19,15 @@ class Conduit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Icehunter/conduit/releases/download/v1.21.2/conduit_linux_amd64.tar.gz"
-      sha256 "e11e9727d353c6fbf8b0a7321c3364c239723a2b87a6215a4309e09cf7e6986b"
+      url "https://github.com/Icehunter/conduit/releases/download/v1.22.0/conduit_linux_amd64.tar.gz"
+      sha256 "85eaa156eb25939398d7ddff67a0c76341c0716b9fe798b90b22c5e22fc49988"
       define_method(:install) do
         bin.install "conduit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Icehunter/conduit/releases/download/v1.21.2/conduit_linux_arm64.tar.gz"
-      sha256 "d9d3ebb13f2e0963eefc88aa9044f9aa32e3fbae8b7884331df1ef5ddec8c9de"
+      url "https://github.com/Icehunter/conduit/releases/download/v1.22.0/conduit_linux_arm64.tar.gz"
+      sha256 "2d6421d0cfb42c75fca439bf477216f98cfe8a8206727d1d564de78daf185ad6"
       define_method(:install) do
         bin.install "conduit"
       end
