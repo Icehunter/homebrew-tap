@@ -5,12 +5,12 @@
 class DuneAdmin < Formula
   desc "Local-first, provider-aware terminal agent (Claude Code wire-compatible)."
   homepage "https://github.com/Icehunter/dune-admin"
-  version "0.41.4"
+  version "0.41.5"
   license "MIT"
 
   on_macos do
-    url "https://github.com/Icehunter/dune-admin/releases/download/v0.41.4/dune-admin_darwin_all.tar.gz"
-    sha256 "4d7366e1f7b1457c02a2252484b9244552b91d28e2c923ed63f721a167bc2ad4"
+    url "https://github.com/Icehunter/dune-admin/releases/download/v0.41.5/dune-admin_darwin_all.tar.gz"
+    sha256 "a22bdfe918d77c354e4df345526d02185a5fe3429a5338769fa3e483a9fad389"
 
     define_method(:install) do
       bin.install "dune-admin"
@@ -26,8 +26,8 @@ class DuneAdmin < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Icehunter/dune-admin/releases/download/v0.41.4/dune-admin_linux_amd64.tar.gz"
-      sha256 "9224dffacced1e288a23ce61b797ca2e994dcacfdb2f4236d34498c72936a19c"
+      url "https://github.com/Icehunter/dune-admin/releases/download/v0.41.5/dune-admin_linux_amd64.tar.gz"
+      sha256 "148ed5e5fce7683d81c1a0bc784a9c0713895918ce62fd36c8fe33038b2ce0f8"
       define_method(:install) do
         bin.install "dune-admin"
         pkgshare.install "item-data.json"
@@ -40,8 +40,8 @@ class DuneAdmin < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Icehunter/dune-admin/releases/download/v0.41.4/dune-admin_linux_arm64.tar.gz"
-      sha256 "891820ce64138bdeb74afe12520848b545780faa6a30590ba6b3b3bf4277ce99"
+      url "https://github.com/Icehunter/dune-admin/releases/download/v0.41.5/dune-admin_linux_arm64.tar.gz"
+      sha256 "f4594434469b76e53214e7817326dbffe2f7de41d58261a1dc9cf9a050f2a3b9"
       define_method(:install) do
         bin.install "dune-admin"
         pkgshare.install "item-data.json"
